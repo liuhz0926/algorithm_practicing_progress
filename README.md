@@ -1,1 +1,1 @@
-# algorithm_practicing_progress
+#### This is a Python 3 solution workbook for Lintcode Algorithm Practice
