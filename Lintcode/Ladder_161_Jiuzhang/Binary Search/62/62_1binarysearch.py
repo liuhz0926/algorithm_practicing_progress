@@ -15,7 +15,7 @@ class Solution:
             # 要点：每次取一个mid的位置，都会切除一个连续的array，一个rsa
             # 所以要看target实在连续的array里面。还是在rsa里面
             # mid比start大，证明切出来左边是array，右边是rsa
-            if A[mid] >= A[start]:
+            if A[mid] >= A[start]: # 和> A[end]一样，分清在那部分即可
                 # 看target的位置
                 # target在左边连续的array里面。那end直接放到mid来。继续正常二分法（其实就是做mid和target的对比）
                 if A[start] <= target <= A[mid]:
