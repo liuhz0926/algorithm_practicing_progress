@@ -1,4 +1,4 @@
-### This is a Python 3 solution workbook for Leetcode and Lintcode algorithm practice.
+### This is a Python 3 solution workbook for Lintcode algorithm practice.
 
 Google Sheet is available by the link:
 
