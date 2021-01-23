@@ -1,0 +1,21 @@
+public int maxProfit(int[] prices) {
+        int max = 0;
+        for(int i = 0; i < prices.length; i++) {
+            int firstProfit = getMaxProfit(0, i, prices);
+            int secondProfit = getMaxProfit(i, prices.length, prices);
+            max = Math.max(max, firstProfit + secondProfit);
+        }
+
+        return max;
+    }
+
+    private int getMaxProfit(int left, int right, int[] prices) {
+        if(right - left < 2) return 0;
+        int max = 0, min = Integer.MAX_VALUE;
+        for(int i = left; i < right; i++) {
+            min = Math.min(min, prices[i]);
+            max = Math.max(max, prices[i] - min);
+        }
+
+        return max;
+    }
