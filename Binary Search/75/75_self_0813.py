@@ -29,3 +29,27 @@ class Solution:
                 end = mid
 
         return -1
+
+class Solution:
+    """
+    @param A: An integers array.
+    @return: return any of peek positions.
+
+    另一个写法
+    """
+    def findPeak(self, A):
+        # write your code here
+        start, end = 1, len(A) - 1
+        while start + 1 <  end:
+            mid = (start + end) // 2
+            if A[mid] < A[mid - 1]:
+                end = mid
+            elif A[mid] < A[mid + 1]:
+                start = mid
+            else:
+                return mid
+
+        if A[start] < A[end]:
+            return end
+        else:
+            return start
