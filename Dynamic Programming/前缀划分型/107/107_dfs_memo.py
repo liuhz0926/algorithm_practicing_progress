@@ -14,6 +14,7 @@ class Solution:
         return self.is_possible(s, 0, max_length, wordSet, {})
 
     def is_possible(self, s, index, max_length, wordSet, memo):
+        # 在memo里面返回
         if index in memo:
             return memo[index]
 
